@@ -1,0 +1,37 @@
+$color-primary: red;
+$color-secondary: green;
+$color-secondary-light: rgb(0, 255, 0);
+$color-accent: blue;
+body{
+    div{
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 0 14px;
+        border: 1px solid $color-primary;
+        h1{
+            color: $color-secondary;
+            text-align: center;
+            text-decoration: underline;
+        }
+        section{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            article{
+                border: 1px solid $color-secondary;
+                border-bottom-color: $color-secondary-light;
+                padding: 1rem;
+                &:nth-of-type(odd) p{
+                    color: $color-accent;
+                }
+                &:nth-of-type(even) p{
+                    color: $color-primary;
+                }
+                p{
+                    text-align: center;
+                }
+                
+            }
+        }
+    }
+}
