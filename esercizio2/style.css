@@ -1,0 +1,36 @@
+body div {
+  max-width: 90%;
+  margin: 0 auto;
+  /* padding: 12px 14px; se metto il padding mi escono dei rettangoli sotto che non  riesco a togliere */
+  border: 1px solid red;
+}
+body div h1 {
+  color: green;
+  text-align: center;
+  text-decoration: underline;
+}
+body div section:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+body div section:first-of-type article {
+  padding: 10px;
+}
+body div section:first-of-type article:nth-of-type(odd) {
+  color: blue;
+  border: 1px solid green;
+  font-size: 1rem;
+}
+body div section:first-of-type article:nth-of-type(even) {
+  color: red;
+  border: 1px solid green;
+  font-size: 1rem;
+}
+body div section:last-of-type article {
+  width: 100%;
+  text-align: center;
+  color: green;
+  border: 1px solid purple;
+  font-size: 24px;
+}/*# sourceMappingURL=style.css.map */

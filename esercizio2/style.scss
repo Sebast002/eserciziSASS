@@ -1,0 +1,47 @@
+$color-primary: red;
+$color-secondary: green;
+$color-secondary-light: rgb(0, 255, 0);
+$color-accent: blue;
+@mixin article-card($color, $border-color, $font-size :1rem){
+    color: $color;
+    border: 1px solid $border-color;
+    font-size: $font-size;
+}
+body{
+    div{
+        max-width: 90%;
+        margin: 0 auto;
+        /* padding: 12px 14px; se metto il padding mi escono dei rettangoli sotto che non  riesco a togliere */
+        border: 1px solid $color-primary;
+        h1{
+            color: $color-secondary;
+            text-align: center;
+            text-decoration: underline;
+        }
+        section{
+            &:first-of-type{
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 10px;
+                article{
+                    padding: 10px;
+                    &:nth-of-type(odd){
+                        @include article-card($color-accent, $color-secondary )
+                    }
+                    &:nth-of-type(even){
+                        @include article-card($color-primary, $color-secondary )
+                    }
+            
+                }
+   
+            }
+            &:last-of-type{
+                article{
+                    width: 100%;
+                    text-align: center;
+                    @include article-card($color-secondary, purple, 24px )
+                }
+            }
+        }
+    }
+}

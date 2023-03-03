@@ -1,31 +1,30 @@
 body div {
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 0 14px;
-    border: 1px solid red;
-  }
-  body div h1 {
-    color: green;
-    text-align: center;
-    text-decoration: underline;
-  }
-  body div section {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 10px;
-  }
-  body div section article {
-    border: 1px solid green;
-    border-bottom-color: rgb(0, 255, 0);
-    padding: 1rem;
-  }
-  body div section article:nth-of-type(odd) p {
-    color: blue;
-  }
-  body div section article:nth-of-type(even) p {
-    color: red;
-  }
-  body div section article p {
-    text-align: center;
-  }
-  
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 14px;
+  border: 1px solid red;
+}
+body div h1 {
+  color: green;
+  text-align: center;
+  text-decoration: underline;
+}
+body div section {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+body div section article {
+  border: 1px solid green;
+  border-bottom-color: rgb(0, 255, 0);
+  padding: 1rem;
+}
+body div section article:nth-of-type(odd) p {
+  color: blue;
+}
+body div section article:nth-of-type(even) p {
+  color: red;
+}
+body div section article p {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
