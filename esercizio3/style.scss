@@ -1,0 +1,46 @@
+@use "variable-module.scss" as vm;
+@use "functions-module.scss" as fm;
+
+@mixin article-card($color, $border-color, $font-size: 1rem){
+    color: $color;
+    border: fm.px-to-rem(1) solid $border-color;
+    font-size: $font-size;
+}
+body{
+    div{
+        max-width: 90%;
+        margin: 0 auto;
+        padding: fm.px-to-rem(12) fm.px-to-rem(14);
+        border: fm.px-to-rem(1) solid vm.$color-primary;
+        h1{
+            color: vm.$color-secondary;
+            text-align: center;
+            text-decoration: underline;
+        }
+        section{
+            &:first-of-type{
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: fm.px-to-rem(10);
+                article{
+                    padding: fm.px-to-rem(10);
+                    &:nth-of-type(odd){
+                        @include article-card(vm.$color-accent, vm.$color-secondary )
+                    }
+                    &:nth-of-type(even){
+                        @include article-card(vm.$color-primary, vm.$color-secondary )
+                    }
+            
+                }
+   
+            }
+            &:last-of-type{
+                article{
+                    width: 100%;
+                    text-align: center;
+                    @include article-card(vm.$color-secondary,  purple, fm.px-to-rem(24) )
+                }
+            }
+        }
+    }
+}
