@@ -1,0 +1,58 @@
+@use "variable-module.scss" as vm;
+@use "functions-module.scss" as fm;
+/* @for $var from 1 to 20 { var :@if $var == 10 { var } } */
+
+@mixin article-card($color, $border-color, $font-size: 1rem){
+    color: $color;
+    border: fm.px-to-rem(1) solid $border-color;
+    font-size: $font-size;
+}
+.text{
+            color: vm.$color-secondary;
+            width: fit-content;
+            margin: 1rem auto;
+
+}
+body{
+    div{
+        max-width: 90%;
+        margin: 0 auto;
+        padding: fm.px-to-rem(12) fm.px-to-rem(14);
+        border: fm.px-to-rem(1) solid vm.$color-primary;
+        text-align: center;
+        h1{
+            @extend .text;
+            border-bottom: 1px solid vm.$color-accent;
+        }
+        h2{
+            @extend .text;
+            padding: 1rem;
+            border: 1px solid vm.$color-primary;
+        }
+        section{
+            &:first-of-type{
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: fm.px-to-rem(10);
+                article{
+                    padding: fm.px-to-rem(10);
+                    &:nth-of-type(odd){
+                        @include article-card(vm.$color-accent, vm.$color-secondary )
+                    }
+                    &:nth-of-type(even){
+                        @include article-card(vm.$color-primary, vm.$color-secondary )
+                    }
+            
+                }
+   
+            }
+            &:last-of-type{
+                article{
+                    width: 100%;
+                    text-align: center;
+                    @include article-card(vm.$color-secondary,  blue, fm.px-to-rem(24) )
+                }
+            }
+        }
+    }
+}

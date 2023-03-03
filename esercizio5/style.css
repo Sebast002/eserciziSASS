@@ -1,0 +1,47 @@
+/* @for $var from 1 to 20 { var :@if $var == 10 { var } } */
+.text, body div h2, body div h1 {
+  color: green;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1rem auto;
+}
+
+body div {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0.75rem 0.875rem;
+  border: 0.0625rem solid red;
+  text-align: center;
+}
+body div h1 {
+  border-bottom: 1px solid blue;
+}
+body div h2 {
+  padding: 1rem;
+  border: 1px solid red;
+}
+body div section:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.625rem;
+}
+body div section:first-of-type article {
+  padding: 0.625rem;
+}
+body div section:first-of-type article:nth-of-type(odd) {
+  color: blue;
+  border: 0.0625rem solid green;
+  font-size: 1rem;
+}
+body div section:first-of-type article:nth-of-type(even) {
+  color: red;
+  border: 0.0625rem solid green;
+  font-size: 1rem;
+}
+body div section:last-of-type article {
+  width: 100%;
+  text-align: center;
+  color: green;
+  border: 0.0625rem solid blue;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=style.css.map */
